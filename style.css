@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* NAGŁÓWEK */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #181818;
+    border-bottom: 2px solid #d4af37; /* Złoty akcent */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #ffb6c1; /* Puder różowy */
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.cta-btn {
+    color: #d4af37;
+}
+
+.cta-btn {
+    border: 1px solid #d4af37;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(18,18,18,0.7), rgba(18,18,18,0.85)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #d4af37;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #dddddd;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #d4af37;
+    color: #121212;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+    background-color: #c5a028;
+    transform: translateY(-2px);
+}
+
+/* SEKCJE */
+section {
+    padding: 90px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 10px auto 0 auto;
+}
+
+/* O NAS */
+.about {
+    background-color: #161616;
+}
+
+.about-text {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #cccccc;
+}
+
+/* USŁUGI */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaaaaa;
+    font-size: 15px;
+}
+
+/* OPINIE */
+.reviews {
+    background-color: #161616;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #d4af37;
+}
+
+.review-card p {
+    font-style: italic;
+    color: #dddddd;
+    margin-bottom: 15px;
+}
+
+.review-card span {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* KONTAKT */
+.contact-box {
+    background-color: #1a1a1a;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.contact-box p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #cccccc;
+}
+
+.contact-box i {
+    color: #d4af37;
+    width: 25px;
+    text-align: center;
+}
+
+/* STOPKA */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0d0d0d;
+    color: #666666;
+    border-top: 1px solid #1a1a1a;
+    font-size: 14px;
+}
+
+/* MOBILNE */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
